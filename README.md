@@ -2,14 +2,14 @@
 
 Welcome to the self checkout kiosk project! This project aims to develop software for a self checkout kiosk without the use of conditionals. The user/customer will input the numeric barcode for each item they want to purchase, and the items will be displayed along with their prices.
 
+<img width="524" alt="Screenshot 2023-03-09 at 4 40 00 PM" src="https://user-images.githubusercontent.com/111472051/224166271-d88d1737-264c-483c-a169-96281638a47c.png">
+
 ## Objectives
 
 The main objectives of this project are:
 
 Develop software for a self checkout kiosk
 Apply object-oriented programming concepts
-Implement a class to represent the types of items for sale in the store
-Implement a class for the self checkout machine that can scan these items
 Add modifiers to item prices, such as sales, taxes, and bottle deposits
 Complete the customer experience of purchasing items using the self checkout machine
 Implement a loyalty program where loyalty sales are active for all purchases of an item with a LoyaltySale added of a type, even if they were scanned before the loyalty card button was pressed.
@@ -59,9 +59,3 @@ This project implements a loyalty sale functionality for a self-checkout kiosk. 
 To use the loyalty sale functionality, customers need to press the loyalty card button before scanning any items. Once the button is pressed, the sale prices will be activated for all purchases of the relevant item types, even if they were scanned before the button was pressed. Customers can then scan items as usual, and the loyalty sale prices will be reflected in the item prices.
 
 Note that the loyalty sale prices are not applied to the base price of the items. Instead, they are applied as a separate modifier that is added to the price if the loyalty card button has been pressed.
-
-
-<img width="524" alt="Screenshot 2023-03-09 at 4 40 00 PM" src="https://user-images.githubusercontent.com/111472051/224166271-d88d1737-264c-483c-a169-96281638a47c.png">
-
-
-
