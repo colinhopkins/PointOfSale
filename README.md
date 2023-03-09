@@ -28,29 +28,37 @@ If you have a loyalty program card, press the "Loyalty Card" button to activate 
 
 The self checkout kiosk software is developed without using any conditionals. Instead, object-oriented programming approaches are used to make decisions based on the types of objects stored in variables.
 
+## Features
+
+The program includes the following features:
+
+Scanning items: Customers can scan items by typing in the barcode number and pressing enter. The program will then display the name and price of the item with tax applied. If there are any sales for that item it will automatically display.
+
+Adding items to the cart: Once an item has been scanned, it is added to the customer's cart and the total cost is updated.
+
+Clearing the cart: Customers can clear their cart at any time by pressing the "clear" button. This will remove all items from the cart and reset the total cost to zero.
+
+Viewing the cart: Customers can view the items in their cart at any time by pressing the "view cart" button. The program will display the name, price, and quantity of each item, as well as the total cost.
+
+Paying with cash: When the customer is ready to pay, they can press the "checkout" button. The program will then display the total cost and ask the customer to enter the amount of cash they are paying with. If the customer pays with more cash than the total cost, the program will calculate the change and display it.
+
+Paying with credit: Customers can also pay with a credit card by pressing the "credit" button. The program will then display the total cost and ask the customer to swipe their credit card. If the transaction is approved, the program will display a message confirming the payment.
+
+Loyalty card: Customers can enter their loyalty card number at any time by pressing the "loyalty card" button. This will apply any discounts or promotions associated with their card.
+
+Rescanning items: Customers can rescan an item by pressing enter immediately after scanning the item. This will add another of the same item to the cart.
+
+Error item: If no item has been scanned by this customer yet, or the clear button was pressed after the last item was scanned, the program will add an "error" item with a price of 0.0 to the cart.
+
 ### Loyalty Sale Functionality
+
 This project implements a loyalty sale functionality for a self-checkout kiosk. Customers can enter a loyalty program card, which activates a sale price for certain items. The sale price is a percentage discount specified for each item type.
 
 #### Usage
+
 To use the loyalty sale functionality, customers need to press the loyalty card button before scanning any items. Once the button is pressed, the sale prices will be activated for all purchases of the relevant item types, even if they were scanned before the button was pressed. Customers can then scan items as usual, and the loyalty sale prices will be reflected in the item prices.
 
 Note that the loyalty sale prices are not applied to the base price of the items. Instead, they are applied as a separate modifier that is added to the price if the loyalty card button has been pressed.
-
-#### Implementation
-The loyalty sale functionality is implemented as a new class named LoyaltySale in the store.model.items package. This class extends the Modifier class and has a constructor that takes a Double argument representing the percentage of the sale price. The sale price is only applied to an item if the loyalty card button has been pressed by the current customer.
-
-The loyalty card button is implemented in the GUI, and when it is pressed, a boolean flag is set to true indicating that the loyalty sale prices should be activated for the current customer. This flag is passed to the SelfCheckout class, which is responsible for keeping track of the items in the customer's cart and computing the final price.
-
-When an item is scanned, the SelfCheckout class checks if the loyalty sale prices should be applied for the item type. If so, it adds a LoyaltySale modifier to the item. The loyalty sale modifiers are stored separately from other modifiers (such as taxes and discounts) and are only applied if the loyalty card button has been pressed.
-
-#### Testing
-The loyalty sale functionality is tested in a test suite named ApplicationObjective in the tests package. The tests cover scenarios such as:
-
-Activating and deactivating the loyalty sale prices with the loyalty card button
-Applying the loyalty sale prices to items in the customer's cart
-Ensuring that the loyalty sale prices are not applied to items for the next customer
-The tests use ScalaTest and can be run from an IDE or the command line using the sbt test command.
-
 
 
 
