@@ -61,6 +61,7 @@ To use the loyalty sale functionality, customers need to press the loyalty card 
 Note that the loyalty sale prices are not applied to the base price of the items. Instead, they are applied as a separate modifier that is added to the price if the loyalty card button has been pressed.
 
 
+<img width="524" alt="Screenshot 2023-03-09 at 4 40 00 PM" src="https://user-images.githubusercontent.com/111472051/224166271-d88d1737-264c-483c-a169-96281638a47c.png">
 
 
 
